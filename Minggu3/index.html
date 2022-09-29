@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multimedia HTML</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <h2>HTML 5 - Mengelola File Multimedia</h2>
+    <button onclick="playVid()" class="button">Play</button>
+    <button onclick="pauseVid()" class="button2">Pause</button>
+    <button onclick="durasiVid()" class="button">Durasi Video</button>
+    <button onclick="enablecontrols()" class="button">Enable Control</button>
+    <button onclick="disablecontrols()" class="button2">Disable Control</button><br>
+    <video width="500px" id="myVideo">
+        <source src="asset/mov_bbb.mp4" type="video/mp4">
+    </video>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/33Xe3z8L73A" 
+     title="YouTube video player" frameborder="0"
+     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+     class="youtube"></iframe>
+     <object data="asset/gambar.jpg" class="object"></object>
+
+</body>
+<script>
+    var vid = document.getElementById("myVideo");
+
+function enablecontrols() {
+    vid.controls = true;
+    vid.load();
+}
+
+function disablecontrols() {
+    vid.controls = false;
+    vid.load();
+}
+
+
+function playVid() {
+    vid.play();
+}
+
+function pauseVid() {
+    vid.pause();
+} 
+
+function durasiVid() {
+    alert(vid.duration);
+}
+</script>
+</html>
